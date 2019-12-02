@@ -1,0 +1,38 @@
+﻿<Window x:Class="CA2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CA2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="97*"/>
+        </Grid.ColumnDefinitions>
+        <RadioButton x:Name="RBall" Content="All" HorizontalAlignment="Left" Margin="99,134,0,0" VerticalAlignment="Top" Click="RBall_Click"/>
+        <RadioButton x:Name="RBland" Content="Land" HorizontalAlignment="Left" Margin="99,182,0,0" VerticalAlignment="Top" Click="RBall_Click"/>
+        <RadioButton x:Name="RBwater" Content="Water" HorizontalAlignment="Left" Margin="99,231,0,0" VerticalAlignment="Top" Click="RBall_Click"/>
+        <RadioButton x:Name="RBair" Content="Air" HorizontalAlignment="Left" Margin="99,282,0,0" VerticalAlignment="Top" Click="RBall_Click"/>
+        <ListBox x:Name="LBXallactivites" HorizontalAlignment="Left" Height="163" Margin="199,134,0,0" VerticalAlignment="Top" Width="174"/>
+        <ListBox x:Name="LBXselectedactivities" HorizontalAlignment="Left" Height="163" Margin="58,134,0,0" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
+        <Button x:Name="BTNadd" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="436,153,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="BTNadd_Click"/>
+        <Button x:Name="BTNremove" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="436,231,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="BTNremove_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="199,112,0,0" TextWrapping="Wrap" Text="All Activities" VerticalAlignment="Top" Width="76"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,112,0,0" TextWrapping="Wrap" Text="Selected Activites " VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="199,50,0,0" TextWrapping="Wrap" Text="Activity Planner" VerticalAlignment="Top" Width="174" FontSize="24" Foreground="#FF1680C9"/>
+        <Label Content="Tota Cost:" HorizontalAlignment="Left" Margin="58,58,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock x:Name="TBLtotalcost" HorizontalAlignment="Left" Margin="134,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="28" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+    </Grid>
+</Window>
