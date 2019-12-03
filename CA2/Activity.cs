@@ -11,6 +11,7 @@ namespace CA2
     public class Activity : IComparable
     {
         //Properties
+
         public decimal Cost { get; set;}
         public string Name { get; set; }
         public DateTime ActivityDate { get; set; }
