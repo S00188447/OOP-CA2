@@ -11,41 +11,16 @@ namespace CA2
     public class Activity : IComparable
     {
         //Properties
-        private decimal _amount;
-        public decimal Amount
-        {
-            get { return _amount; }
-            set
-            {
-                TotalCost += value;
-                _amount = value;
-            }
-        }
-
-
-        //Properties
+        public decimal Cost { get; set;}
         public string Name { get; set; }
         public DateTime ActivityDate { get; set; }
-        public decimal Cost { get; set; }
-        public string Description { get; set; }
+        public static string Description { get; set; }
         public Category Category { get; set; }
-
-        public static decimal TotalCost;
-
-        
-
+        public decimal TotalCost { get; set; }
         public override string ToString()
         {
-            return Name + " - " + ActivityDate; 
+            return $" {Name}{" - "}{ ActivityDate.ToShortDateString() }"; 
         }
-
-        //Constructors - will return later
-        //public Expense() : this(0, DateTime.Now, "unknown")
-        // {
-
-        //}
-
-
         public Activity(string newname, DateTime newdate, decimal newcost, string newdesc, Category newcategory)
         {
             Name = newname;
@@ -56,16 +31,16 @@ namespace CA2
             Category = newcategory;
         }
 
-
-        //Methods
-        //public override string ToString()
-        //{
-        //    return $"{Category} {Amount:C} on {ActivityDate.ToShortDateString()}";
-        //}
-
         public int CompareTo(object obj)
         {
-            throw new NotImplementedException();
-        }
+            //get a reference to the next object in the list
+            Activity objectthatIamcomparingto = (Activity)obj;
+
+            //choosing the video I am comparing
+            int returnValue = this.ActivityDate.CompareTo(objectthatIamcomparingto.ActivityDate);
+
+            //return
+            return returnValue;
+        }      
     }
 }

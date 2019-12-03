@@ -33,6 +33,8 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
+        <Label Content="Description :" HorizontalAlignment="Left" Margin="199,329,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TBLdesc" HorizontalAlignment="Left" Margin="209,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
