@@ -23,18 +23,9 @@
         <TextBlock HorizontalAlignment="Left" Margin="58,112,0,0" TextWrapping="Wrap" Text="Selected Activites " VerticalAlignment="Top" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Height="34" Margin="199,50,0,0" TextWrapping="Wrap" Text="Activity Planner" VerticalAlignment="Top" Width="174" FontSize="24" Foreground="#FF1680C9"/>
         <Label Content="Tota Cost:" HorizontalAlignment="Left" Margin="58,58,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBlock x:Name="TBLtotalcost" HorizontalAlignment="Left" Margin="134,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="28" Grid.Column="1">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
         <Label Content="Description :" HorizontalAlignment="Left" Margin="199,329,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="TBLdesc" HorizontalAlignment="Left" Margin="209,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TBLtotalcost" Grid.Column="1" HorizontalAlignment="Left" Margin="169,70,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

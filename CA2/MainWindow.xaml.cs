@@ -132,12 +132,10 @@ namespace CA2
         private void ErrorMessage()
         {
             //if nothing is selected an error message will display
-            if(selectedActivities == null)
-            {
-                //Creating an error message and giving the text block it's value (if the if statement is true)
-                string errorMessage = "Nothing has been selected";
-                TBLdesc.Text = errorMessage;
-            }
+            //Creating an error message and giving the text block it's value (if the if statement is true)
+            string errorMessage = "ERROR: Nothing has been selected";
+            TBLdesc.Text = errorMessage;
+
         }
 
         //handles all radio buttons
